@@ -16,7 +16,7 @@ class App extends Component {
   bstHandleSubmit = (param)=>{
     console.log("App:",param);
 
-    let.products = this.state;
+    let {products} = this.state;
     products.push(param);
     this.setState({
       products:products
