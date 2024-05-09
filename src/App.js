@@ -13,6 +13,16 @@ class App extends Component {
       ]
     }
   }
+  bstHandleSubmit = (param)=>{
+    console.log("App:",param);
+
+    let.products = this.state;
+    products.push(param);
+    this.setState({
+      products:products
+    })
+  }
+
   render() {
     return (
       <div className='container border mt-5'>
@@ -20,7 +30,7 @@ class App extends Component {
           <hr/>
           <BstProductList renderProducts={this.state.products}/>
         <hr/>
-        <BstProductAdd />
+        <BstProductAdd onSubmit = {this.bstHandleSubmit}/>
       </div>
     )
   }
